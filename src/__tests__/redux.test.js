@@ -27,7 +27,7 @@ describe("Redux store and actions", () => {
         json: () => Promise.resolve({ result: "OK" }),
       })
     );
-
+ 
     const expectedActions = [
       { type: actions.ActionTypes.SET_REGISTER_SENDING, payload: true },
       { type: actions.ActionTypes.SET_REGISTER_SEND_ERROR, payload: "" },

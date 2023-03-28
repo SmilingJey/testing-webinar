@@ -14,7 +14,7 @@ describe('check register function', () => {
   afterEach(() => {
     jest.restoreAllMocks();
   });
-
+ 
   test('should be successful', async () => {
     const regresults = await register('email', 'password');
     expect(regresults).toEqual({ result: 'OK' });

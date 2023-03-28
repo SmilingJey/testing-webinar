@@ -5,7 +5,7 @@ import Adapter from 'enzyme-adapter-react-16';
 let mockCard = {
     "likes": [],
     "_id": "1",
-    "name": "Deer",
+    "name": "Deer", 
     "link": "https://cat.photo",
     "owner":
     {

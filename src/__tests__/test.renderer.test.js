@@ -21,7 +21,7 @@ describe('Check Card component', () => {
     },
     "createdAt": "2021-10-24T19:41:51.239Z"
   };
-
+ 
   test('should be equal to snapshot', () => {
     const renderedValue = TestRenderer.create(<Provider store={store}>
       <Card card={mockCard} onImageClick={()=>{}} onDelete={()=>{}}/></Provider>);

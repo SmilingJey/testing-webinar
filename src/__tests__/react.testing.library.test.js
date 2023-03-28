@@ -20,7 +20,7 @@ describe('Header component', () => {
         const img = screen.getByAltText(textProp);
         expect(img).toHaveClass('logo');
     })
-
+ 
     test('should has header-wrapper-element with class header__wrapper', () => {
         const textProp = 'header-wrapper-element';
         const pathProp = '/signup';
