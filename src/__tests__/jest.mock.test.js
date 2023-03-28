@@ -28,7 +28,7 @@ describe('check register function', () => {
         status: '500',
     }));
 
-    expect(register('email', 'password')).rejects.toBe('Ошибка: 500');
+    await expect(register('email', 'password')).rejects.toBe('Ошибка: 500');
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(`${AUTH_SERVER_URL}/signup`, {
         method: 'POST',
@@ -38,5 +38,6 @@ describe('check register function', () => {
         },
         body: JSON.stringify({email:"email", password:"password"})
     })
+    
   });
 })

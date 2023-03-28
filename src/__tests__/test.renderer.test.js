@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import TestRenderer from 'react-test-renderer';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import Card from '../components/Card';
 import store from "../store/store"
 
@@ -25,5 +26,12 @@ describe('Check Card component', () => {
     const renderedValue = TestRenderer.create(<Provider store={store}>
       <Card card={mockCard} onImageClick={()=>{}} onDelete={()=>{}}/></Provider>);
     expect(renderedValue).toMatchSnapshot();
+  })
+
+  test('should be equal to shallow snapshot', () => {
+    const renderer = new ShallowRenderer();
+    renderer.render(<Provider store={store}>
+      <Card card={mockCard} onImageClick={()=>{}} onDelete={()=>{}}/></Provider>);
+    expect(renderer.getRenderOutput()).toMatchSnapshot();
   })
 })

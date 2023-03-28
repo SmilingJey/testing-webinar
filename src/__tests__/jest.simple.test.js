@@ -2,20 +2,23 @@ import {getResponse} from '../utils/utils';
 
 let testObject = {
   ok: true, 
-  json: function () {return {
-    result: 'OK'
-  }}
+  json: function () {
+    return Promise.resolve({
+      result: 'OK'
+    }
+  )}
 };
 
 describe('check getResponse function', () => {
-    test('should be success', () => {
+    test('should be success', async () => {
       const regresults = getResponse(testObject);
-      expect(regresults).toEqual({ result: 'OK'});
+      return expect(regresults).resolves.toEqual({ result: 'OK'});
     });
 
     test('should be failed', async () => {
       testObject.ok = false;
       testObject.status = 500;
-      expect(getResponse(testObject)).rejects.toBe('Ошибка: 500');
+      const regresults = getResponse(testObject);
+      return expect(regresults).rejects.toBe('Ошибка: 500');
     });
 })

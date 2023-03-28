@@ -1,5 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Check Card component should be equal to shallow snapshot 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "getServerState": undefined,
+      "store": Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Object {
+        "addNestedSub": [Function],
+        "getListeners": [Function],
+        "handleChangeWrapper": [Function],
+        "isSubscribed": [Function],
+        "notifyNestedSubs": [Function],
+        "trySubscribe": [Function],
+        "tryUnsubscribe": [Function],
+      },
+    }
+  }
+>
+  <Card
+    card={
+      Object {
+        "_id": "1",
+        "createdAt": "2021-10-24T19:41:51.239Z",
+        "likes": Array [],
+        "link": "https://images.unsplash.com/",
+        "name": "Deer",
+        "owner": Object {
+          "_id": "1",
+          "about": "Web-developer",
+          "avatar": "https://images.unsplash.com/",
+          "cohort": "cohort-13",
+          "name": "John",
+        },
+      }
+    }
+    onDelete={[Function]}
+    onImageClick={[Function]}
+  />
+</Context.Provider>
+`;
+
 exports[`Check Card component should be equal to snapshot 1`] = `
 <li
   className="places__item card"

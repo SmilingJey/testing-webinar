@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import store from "../store/store"
 import Header from '../components/Header';
-
+ 
 describe('Header component', () => {
     afterEach(cleanup)
 
